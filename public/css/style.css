@@ -55,9 +55,6 @@ html, body {
       float: left;
       background: #bbbbbb;
     }
-    #save-tool:hover {
-      background: #0000ff;
-    }
     #tools{
       width: 880px;
       height: 50px;
