@@ -3,18 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Angularの練習</title>
-  <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
-  <script src="myscript.js"></script>
-  <style>
-    .done-true {
-      color: gray;
-      text-decoration: line-through;
-    }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/hover-min.css">
 </head>
 <body>
-  <h1>Todo list</h1>
-  <div ng-controller="mainCtrl">
+  <!-- header -->
+  <div id="header">
+    <div id="logo"><h1 id="memori">m e m o r i</h1></div>
+    <div id="save-tools">
+      <div id="save-tool" name="evernote"><img src="../img/icon-evernote.png" width="40" height="40" /></div>
+      <div id="save-tool" name="dropbox"><img src="../img/icon-dropbox.png" width="40" height="40" /></div>
+      <div id="save-tool" name="facebook"><img src="../img/icon-facebook.png" width="40" height="40" /></div>
+      <div id="save-tool" name="twitter"><img src="../img/icon-twitter.png" width="40" height="40" /></div>
+      <div id="save-tool" name="mail"><img src="../img/icon-mail.png" width="40" height="40" /></div>
+      <div id="save-tool" name="local"><img src="../img/icon-local.png" width="40" height="40" /></div>
+    </div>
+  </div>
+  <!-- /header -->
+
+  <!-- editor -->
+  <div id="tools">
+    <div id="tool" name="font"></div>
+    <div id="tool" name="size"></div>
+    <div id="tool" name="bold"></div>
+    <div id="tool" name="italic"></div>
+    <div id="tool" name="text-line"></div>
+    <div id="tool" name="color"></div>
+    <div id="tool" name="marker"></div>
+    <div id="tool" name="item"></div>
+    <div id="tool" name="enum"></div>
+    <div id="tool" name="checkbox"></div>
+    <div id="tool" name="line"></div>
+    <div id="tool" name="align"></div>
+    <div id="tool" name="table"></div>
+    <div id="tool" name="voice"></div>
+    <div id="tool" name="snapshot"></div>
+    <div id="tool" name="attach"></div>
+  </div>
+  <div id="editor">
+    <textarea ng-model="memo" placeholder="Enter here.">
+    </textarea>
+  </div>
+  <!-- /editor -->
+
+  
+
+  <!-- <div style="float:left;"> -->
+  <!-- </div> -->
+  <!-- <div ng-controller="mainCtrl">
   <p>Finished Task: {{getDoneCount()}} / {{tasks.length}}</p>
   <button ng-click="deleteDone()">Delete Finished</button>
   <ul>
@@ -28,6 +65,6 @@
   <input type="text" ng-model="newTaskBody">
   <input type="submit" value="add">
   </form>
-  </div>
+  </div> -->
 </body>
 </html>
